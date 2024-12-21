@@ -1,0 +1,109 @@
+/* 通用样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll; /* 强制显示纵向滚动条 */
+}
+
+.slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeInOut 64s infinite;
+    opacity: 0;
+}
+
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 8s; }
+.slideshow img:nth-child(3) { animation-delay: 16s; }
+.slideshow img:nth-child(4) { animation-delay: 24s; }
+.slideshow img:nth-child(5) { animation-delay: 32s; }
+.slideshow img:nth-child(6) { animation-delay: 40s; }
+.slideshow img:nth-child(7) { animation-delay: 48s; }
+.slideshow img:nth-child(8) { animation-delay: 56s; }
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; transform: scale(1.1); }
+    10%, 90% { opacity: 1; transform: scale(1); }
+}
+
+/* 导航栏样式 */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+/* 主内容样式 */
+main .content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 50px auto;
+    width: 60%;
+    border-radius: 10px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* 标题样式 */
+header h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+    color: #fff;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
